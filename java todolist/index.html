@@ -17,11 +17,13 @@
         width: 350px;
         text-align: center;
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin: 0px auto;
         border: 5px solid black;
-        flex-wrap: wrap;
+        display: block;
+
     }
 
     #todos {
@@ -33,7 +35,7 @@
 
     .todo {
         width: 200px;
-        background-color: pink;
+        background-color: azure;
         color: black;
         font-family: Arial, Helvetica, sans-serif;
         border: 3px solid black;
@@ -50,7 +52,7 @@
 
     <div class="container">
         <h1>TODO-APP</h1>
-        <input type="text" id="inp">
+        <input type="text" id="inp" required>
         <button onclick="addTodo()">Add Todo</button>
     </div>
 

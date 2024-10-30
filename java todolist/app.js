@@ -4,16 +4,28 @@ function addTodo() {
     var todos = document.getElementById('todos')
     var inpVal = document.getElementById('inp')
     var element = document.createElement('div')
+
+    if (inpVal.value === "") {
+        alert("PLEASE FILL THE INPUTBAR")
+        return;
+    }
+
+
     element.setAttribute('id', idCount)
     element.setAttribute('class', "todo")
 
     element.innerHTML = `
+    
     <p>${inpVal.value}</p> <button onclick="deleteTodo(${idCount})">Delete</button> <button onclick="updateTodo(${idCount})">Update</button>
    `
-
+    
     todos.appendChild(element)
 
+    inpVal.value = "";
+
     idCount = idCount + 1;
+    
+    
 }
 
 function deleteTodo(id){
